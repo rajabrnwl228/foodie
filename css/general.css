@@ -163,7 +163,7 @@ html {
 
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 0.8rem #f58b2f;
+  /* box-shadow: 0 0 0 0.5rem #f58b2f; */
 }
 .center-text {
   text-align: center;

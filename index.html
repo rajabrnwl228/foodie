@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
-      content="foodie is AI-powered food subscription that will make you eat healthy again, 30 days per month. It's tailored to your personal tastes and neutrients need"
+      content="foodie is a best restaurant having monthly food subscription plans that will make you eat healthy again, 30 days per month. It's tailored to your personal tastes and neutrients need"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -37,6 +37,38 @@
           class="logo"
         />
       </a>
+        <form action="" class="search-form">
+          <div class="place" id="placeid">
+           <ion-icon name="location-sharp" class="place-location-icon" ></ion-icon>
+          <input type="text"  placeholder="location" class="place-location-bar" id="location-bar"> 
+          <ion-icon name="caret-up" class="place-location-icon"></ion-icon>
+        </div>
+          <div class="search-form-box" id="search-form-boxid" >
+            <div class="search-form-divider">|</div>
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+          <input
+            class="search-bar"
+            type="text"
+            placeholder="Search for a dish"
+            name="search"
+            maxlength="40"
+          />
+        </div>
+          <div class="place-location-box hidden">
+            <div class="locate-address-gps" id="gps">
+              <ion-icon name="locate" class="locate-icon"></ion-icon>
+              <p class="locate-text">Detect Current Location</p>
+            </div>
+            <div class="locate-address-gps" id="Add-address">
+              <ion-icon name="add-outline" class="locate-icon"></ion-icon>
+              <p class="locate-text">Add  Address</p>
+            </div>
+            <div class="locate-address-gps" id="recent-location">
+              <ion-icon name="time-outline" class="locate-icon"></ion-icon>
+              <p class="locate-text">Recent Locations</p>
+            </div>
+          </div>
+        </form>
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#how">How it works</a></li>
