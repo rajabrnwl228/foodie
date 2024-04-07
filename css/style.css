@@ -183,7 +183,7 @@
 /* FIRST-PAGE */
 /*****************************/
 .first-page {
-  height: 85vh;
+  height: 80vh;
   background-image: url("../first-page.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -245,42 +245,72 @@
   text-shadow: 1px 1px 1px #111;
   font-weight: 800;
 }
+
+/*****************************/
+/* Top receipes */
+/*****************************/
 .top-recipes {
-  padding: 3.6rem 0 4.8rem 0;
+  box-sizing: border-box;
 }
 .top-recipes-heading {
-  font-size: 2.8rem;
+  font-size: 3rem;
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.75px;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.8rem;
 }
-.recipes {
-  display: flex;
-  justify-content: space-between;
+.top-recipes-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 32rem);
+  justify-items: center;
+  padding: 1rem 0;
+}
+
+.recipes-img-div {
+  height: 28rem;
+  width: 26rem;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.recipes-img-div:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 .recipes-img {
   height: 18rem;
-  width: 24rem;
-  border-radius: 18px;
+  width: 26rem;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
-.img-desc {
-  font-size: 1.6rem;
-  padding: 1rem;
+.recipes-img-text {
+  color: var(--secondary-color);
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
+}
+
+.all-recipes {
   text-align: center;
+  font-size: 1.8rem;
 }
 
 /*****************************/
 /* HOW IT WORKS-SECTION */
 /*****************************/
 .section-how {
-  padding: 9.6rem 0;
+  /* background-color: rgb(226, 239, 244); */
+  padding-bottom: 9.6rem;
 }
 .step-number {
-  font-size: 8.4rem;
+  font-size: 7.2rem;
   font-weight: 600;
   color: #ddd;
   margin-bottom: 1.2rem;
@@ -322,85 +352,6 @@
 }
 .step-img {
   width: 35%;
-}
-
-/*****************************/
-/* MEAL-SECTION */
-/*****************************/
-.section-meals {
-  padding: 9.6rem 0;
-}
-
-.meal {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  border-radius: 11px;
-  overflow: hidden;
-  transition: all 0.4s;
-}
-.meal:hover {
-  transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
-}
-.meal-img {
-  width: 100%;
-}
-.meal-content {
-  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
-}
-.meal-tag {
-  margin-bottom: 1.2rem;
-  display: flex;
-  gap: 0.4rem;
-}
-.tag {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  color: #333;
-  border-radius: 100px;
-  font-weight: 600;
-}
-.tag--vegetarian {
-  background-color: #51cf66;
-}
-.tag--vegan {
-  background-color: #94d82d;
-}
-.tag--Paleo {
-  background-color: #ffd43b;
-}
-.meal-title {
-  font-size: 2.4rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 3.2rem;
-}
-.meal-attributes {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.meal-attribute {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-.meal-icon {
-  height: 2.4rem;
-  width: 2.4rem;
-  color: #e67e22;
-}
-.diets {
-  /* box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.075);
-  padding: 0 2.4rem; */
-}
-
-.all-recipes {
-  text-align: center;
-  font-size: 1.8rem;
 }
 
 /*****************************/
@@ -457,8 +408,15 @@
 
   /* transform: rotate(-2deg); */
 }
+/*****************************/
+/* SECTION Pricing*/
+/*****************************/
 .section-pricing {
   padding: 9.6rem 0;
+}
+.pricing-plan-box {
+  max-width: 130rem;
+  margin: 0 auto;
 }
 .pricing-plan {
   border-radius: 11px;
@@ -523,12 +481,17 @@
   text-align: center;
   margin-top: 4.8rem;
 }
+.plan-details-box {
+}
 .plan-details {
   font-size: 1.8rem;
   line-height: 1.6;
   text-align: center;
 }
-.feature {
+.feature-box {
+  max-width: 130rem;
+  padding: 2.4rem 0;
+  margin: 0 auto;
 }
 .feature-icon {
   color: #e67e22;
@@ -613,12 +576,6 @@
 
 .cta-form input::placeholder {
   color: #aaa;
-}
-.cta-form select::placeholder {
-}
-.cta *:focus {
-  outline: none;
-  box-shadow: 0 0 0 0.8rem rgb(253, 243, 233, 0.4);
 }
 
 /*****************************/
